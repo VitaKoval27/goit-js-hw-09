@@ -84,10 +84,7 @@ function createGallery(arr) {
 }
 
 gallery.insertAdjacentHTML('beforeend', createGallery(images));
-console.log(
-  'Элементы для SimpleLightbox:',
-  document.querySelectorAll('.gallery a')
-);
+
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -106,5 +103,5 @@ photo.on('show.simplelightbox', function () {
 });
 
 photo.on('error.simplelightbox', function (e) {
-  console.log(e); // Some usefull information
+  console.log(e);
 });
