@@ -90,12 +90,15 @@ console.log(
 );
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+
 let photo = new SimpleLightbox('.gallery a', {
   captions: true,
-  captionData: `title`,
+  captionSelector: 'self',
+  captionData: 'title',
   captionType: 'attr',
   captionPosition: 'bottom',
   captionDelay: 250,
+  captionHTML: true,
 });
 
 photo.on('show.simplelightbox', function () {
